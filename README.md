@@ -28,4 +28,5 @@ Enhance the project by extending the functionality of the NLP analysis:  adding 
 
 ## Configuiring the Cloud9 IDE service in AWS
 1.Create a Cloud9 IDE environment for deploying AWS Lambda function and application.
-<addr>Walk through the steps of creating an environment with default steps with Python runtime
+
+  a. Walk through the steps of creating an environment with default steps with Python runtime
