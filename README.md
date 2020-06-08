@@ -19,7 +19,7 @@ Enhance the project by extending the functionality of the NLP analysis:  adding 
 
 ## Architecture Diagram:
 
-![Architecture_Diagram](https://github.com/shankarfierce/MSDS-498/blob/master/MSDS%20498_%20Data%20engineering%20project.jpg)
+![Architecture_Diagram](https://github.com/shankarfierce/MSDS-498/blob/master/MSDS%20498_%20Data%20engineering%20project1.jpg)
 
 1. Cloudwatch is schduled to run at defined interval to trigger lambdaproducer.
 1. lambda producer pulls the reference data from Dynamo db table and pushes it to SQS.
