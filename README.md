@@ -27,6 +27,11 @@ Enhance the project by extending the functionality of the NLP analysis:  adding 
 3. S3 bucket creation
 
 ## Configuiring the Cloud9 IDE service in AWS
-1.Create a Cloud9 IDE environment for deploying AWS Lambda function and application.
+1. Create a Cloud9 IDE environment for deploying AWS Lambda function and application.
+   1. Walk through the steps of creating an environment with default steps.
 
-  a. Walk through the steps of creating an environment with default steps with Python runtime
+## Create a producer lambda
+## Create a consumer lambda
+## Create a DynamoDb table
+## Create an athena database and external table
+## Configure Quicksight
