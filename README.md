@@ -40,8 +40,38 @@ Enhance the project by extending the functionality of the NLP analysis:  adding 
    1. Walk through the steps of creating an environment with default steps.
 
 ## Create a DynamoDb table (key value store)
+1. The lookup table with key words to search for the articles are stored in Dynamodbtable.
+1. Create a table by name 'keywords' through the console and the items could be added via create item on the console screen.
+
 ## Setup SQS queue
+1. Create a queue through console and name it 'producer'
+
 ## Create a producer lambda
+1. Using cloud9 IDE, lambda function and application could be easily created and deployed, we could develop, execute and test the functionality before deploying it from cloud9. Required libraries and packages are installed in the virtual environment created within the lambda application folder by using.
+
+                                          <source venv/bin/activate>
+                                          <pip install --upgrade <<packagename>>>
+1. producer lambda does two things
+   1. connect to dynamo db and pull the keywords 
+   1. Push the message to SQS queue.
+
 ## Create a consumer lambda
+1. Consumer lambda connects to wikipedia API and pulls the summary of the article limited to few sentences as the snippit. 
+1. Parses the snippit to comprehend service to detect the sentiment and also extend to obtain the classification of the article using detect entity.
+
 ## Create an athena database and external table
+Database and external table are created using the below syntax
+
+                                          <create database wikianalytics;>
+                                          <CREATE EXTERNAL TABLE wikiepedia_summary_analytics.article_sentiments (
+                                              id STRING,
+                                             names STRING,
+                                             wikipedia_snippit STRING,
+                                             Sentiment STRING,
+                                             Type STRING
+                                          ) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+                                          LOCATION 's3://fangsentiment3387/'
+                                          TBLPROPERTIES (
+                                            "skip.header.line.count"="1")>
+
 ## Configure Quicksight
