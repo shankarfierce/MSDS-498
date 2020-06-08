@@ -48,8 +48,10 @@ Enhance the project by extending the functionality of the NLP analysis:  adding 
 
 ## Create a producer lambda
 1. Using cloud9 IDE, lambda function and application could be easily created and deployed, we could develop, execute and test the functionality before deploying it from cloud9. Required libraries and packages are installed in the virtual environment created within the lambda application folder by using.
-<source venv/bin/activate>
-<pip install --upgrade <<packagename>>>
+
+               <source venv/bin/activate>
+               <pip install --upgrade <<packagename>>>
+   
 1. producer lambda does two things
    1. connect to dynamo db and pull the keywords 
    1. Push the message to SQS queue.
@@ -61,16 +63,16 @@ Enhance the project by extending the functionality of the NLP analysis:  adding 
 ## Create an athena database and external table
 Database and external table are created using the below syntax
 
-<create database wikianalytics;>
-<CREATE EXTERNAL TABLE wikiepedia_summary_analytics.article_sentiments (
-   id STRING,
-   names STRING,
-   wikipedia_snippit STRING,
-   Sentiment STRING,
-   Type STRING
-   ) 
- ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
- LOCATION 's3://fangsentiment3387/'
- TBLPROPERTIES ("skip.header.line.count"="1")>
+         <create database wikianalytics;>
+         <CREATE EXTERNAL TABLE wikiepedia_summary_analytics.article_sentiments (
+            id STRING,
+            names STRING,
+            wikipedia_snippit STRING,
+            Sentiment STRING,
+            Type STRING
+            ) 
+          ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+          LOCATION 's3://fangsentiment3387/'
+          TBLPROPERTIES ("skip.header.line.count"="1")>
 
 ## Configure Quicksight
