@@ -8,6 +8,7 @@ also learning the services and technologies along the progress.
 
 ## Architecture Diagram:
 
+![Architecture_Diagram](https://github.com/shankarfierce/MSDS-498/blob/master/MSDS%20498_%20Data%20engineering%20project.jpg)
 
 ## Prerequisies:
 1. AWS Console access
