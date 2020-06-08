@@ -76,3 +76,5 @@ Database and external table are created using the below syntax
           TBLPROPERTIES ("skip.header.line.count"="1")>
 
 ## Configure Quicksight
+Via console, you could signup for amazon quicksight and map the athena data source to build the dashboard and publish it to the users.
+![quicksight_dashboard](https://github.com/shankarfierce/MSDS-498/blob/master/QSDashboard.JPG)
